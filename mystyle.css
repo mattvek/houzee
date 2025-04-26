@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #d6f0f5;
+    padding: 0px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #5397c1; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1fa1f1;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 5px;
+    width: 70%;
+    max-width: 600px; /* to limit width for larger screens if you got one :p*/
+}
+
+.cell {
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.highlighted {
+    background-color: #2ba2ec;  
+    font-weight: bold;
+    color: white;
+    animation: pulse 1s infinite; 
+}
+
+@keyframes growAndFade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#numberDisplay {
+    color: #3094e6;
+    text-shadow: 0 0 5px rgba(0, 213, 255, 0.8), 0 0 10px rgba(94, 236, 236, 0.8), 0 0 15px rgba(255, 69, 0, 0.8);
+}
+
+#drawButton {
+    margin-right: 10px;
+    font: 30px;
+}
+
+button, #numberDisplay {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1{
+    margin: 15px;
+    font: 20px;
+}
